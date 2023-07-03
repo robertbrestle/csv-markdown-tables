@@ -4,10 +4,10 @@ A simple client-side JS converter for CSV to markdown tables.
 # Usage
 Include `csv-markdown-tables.js` on your page, and 
 
-To initialize a form:
+To initialize a form:  
 `MarkdownTablesJS.initForm(formId, inputId, firstRowHeaderId, outputId)`
 
-To perform the conversion and return the markdown table as a string:
+To perform the conversion and return the markdown table as a string:  
 `MarkdownTablesJS.convert(csvText, firstRowHeaders)`
 
 # Example
