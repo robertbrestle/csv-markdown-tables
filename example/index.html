@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>CSV to Markdown Table Converter</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+  <h1>CSV to Markdown Table Converter</h1>
+
+  <form id="form-convert">
+    <label for="input">CSV Input</label>
+    <textarea id="input" rows="10" cols="20"></textarea>
+
+    <div>
+      <input id="firstRowHeader" type="checkbox" checked="checked">
+      <label for="firstRowHeader">First row is a header</label>
+    </div>
+
+    <div class="separator">↓</div>
+
+    <label for="input">Markdown Output</label>
+    <textarea id="output" rows="10" cols="20"></textarea>
+
+    <div class="button-container">
+      <button type="reset">Reset</button>
+      <button type="submit">Convert</button>
+    </div>
+  </form>
+
+
+  <script src="../csv-markdown-tables.js"></script>
+  <script type="text/javascript">
+    window.addEventListener('load', function() {
+      MarkdownTablesJS.initForm("form-convert", "input", "firstRowHeader", "output");
+    }, false )
+  </script>
+
+</body>
+</html>
