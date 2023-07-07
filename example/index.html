@@ -10,10 +10,13 @@
   <h1>CSV to Markdown Table Converter</h1>
 
   <form id="form-convert">
-    <label for="input">CSV Input</label>
+    <label for="input">Delimited Input</label>
     <textarea id="input" rows="10" cols="20"></textarea>
 
     <div>
+      <label for="delimiter">Delimiter</label>
+      <input id="delimiter" type="text" value=",">
+      &nbsp;
       <input id="firstRowHeader" type="checkbox" checked="checked">
       <label for="firstRowHeader">First row is a header</label>
     </div>
@@ -29,11 +32,10 @@
     </div>
   </form>
 
-
   <script src="../csv-markdown-tables.js"></script>
   <script type="text/javascript">
     window.addEventListener('load', function() {
-      MarkdownTablesJS.initForm("form-convert", "input", "firstRowHeader", "output");
+      MarkdownTablesJS.initForm("form-convert", "input", "output", "firstRowHeader", "delimiter");
     }, false )
   </script>
 
